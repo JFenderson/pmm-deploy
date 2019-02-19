@@ -1,0 +1,215 @@
+/* // Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) { 
+    /* navbar */
+.hero-nav{
+    padding-top: 2em;
+}
+.hero-nav a{
+    width: 6em;
+    font-size: 22px;
+}
+.photo-link {
+display: grid;
+}
+/* end navbar */
+/* landing start */
+.landing h1{
+    font-size: 80px;
+}
+.top-title{
+    font-size: 2.5em;
+}
+#countdown li{
+    font-size: 14vh;
+}
+li{
+    width: 20%;
+}
+.about-container{
+    height: auto;
+}
+.about-text h2{
+    font-size: 2.3em;
+}
+.about-text p {
+    font-size: 22px;
+    line-height: 34px;
+}
+/* landing end */
+/* schedule start */
+.schedule{
+    height: 50vh;
+}
+.schedule .container{
+    margin-top: 4em;
+}
+.schedule-row{
+    flex-wrap: inherit;
+}
+.schedule-box{
+    margin: 5px;
+}
+/* .schedule-box{
+    margin: 5px;
+    width: 53%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    flex: none;
+}
+.schedule-box .schedule-box-top span {
+    flex: 0;
+}
+.schedule-box .schedule-box-top ul {
+    flex: 0;
+} */
+.schedule-box .schedule-box-top span {
+    font-size: 50px;
+}
+.schedule-box .schedule-box-top ul li {
+    font-size: 18px;
+}
+.schedule-box h3 {
+    font-size: 20px;
+}
+/* schedule end */
+.comittee-area{
+    height: auto;
+}
+.comittee-wrapper {
+    padding-top: 8em;
+}
+.img-responsive {
+    /* display: block; */
+    max-width: 100%;
+    min-width: 50%;
+    height: 20em;
+}
+/* price area start */
+.price-area{
+    height: auto;
+}
+.plan{
+    margin-top: 8em;
+}
+.title-default{
+    font-size: 44px;
+}
+.sub-title-default{
+    font-size: 23px;
+}
+/* price area end */
+.ticket-form input {
+    width: 90%;
+    margin: 5px auto;
+    height: 50px;
+}
+.ticket-form select{
+    width: 90%;
+    margin: 5px auto;
+    height: 50px;
+}
+/* starts photo gallery/slideshow */
+.photo-gallery-area {
+    padding: 50px 0 125px;
+    height: auto;
+    font-family: 'Quicksand', sans-serif;
+    display: grid;
+}
+.photo-title h1 {
+    text-align: center;
+    font-size: 3em;
+}
+.photo-background{
+    background-color: black;
+    height: 90vh;
+}
+
+.photo-container {
+    margin: 0;
+    max-width: 100%;
+    margin:5vh auto 0 auto;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  
+  .photo-container > div {
+    display: inline-block;
+  }
+  
+  #slideshow {
+    margin: 6vh 0px 0 0;
+      position: relative;
+      width: 100%;
+    height: 250px;
+  }
+  
+  #slideshow > div {
+      position: absolute;
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      bottom: 0; 
+      text-align: center;
+  }
+  
+  #slideshow img {
+    /* width: 60vw;
+    height: 90vh; */
+    width: 63vw;
+    height: 74vh;
+    margin: 0;
+    border: solid 1px rgb(66, 14, 66);
+    image-rendering: optimizeQuality;
+    border-radius: 15px;
+    /* image-rendering: auto; */
+    image-rendering: crisp-edges;
+    /* image-rendering: pixelated; */
+  }
+  
+  .photo-links {
+    width: 40px;
+    font-size: 64px;
+    display: inline-block;
+    color: #9FA8DA;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 400px;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+  /* end photo gallery */
+  /* member sign up start */
+    .member-form input{
+        width: 75%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #memberSubmit{
+        width: 75%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+  /* member sign up end */
+  /* start footer */
+    .form{
+        width: 75%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .footer-social li{
+        width: 15%;
+        font-size: 44px !important;
+    }
+    .footer-social li a i {
+        margin-right: 1em;
+    }
+  /* footer end */
+}

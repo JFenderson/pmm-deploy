@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <!-- <meta http-equiv="Content-Security-Policy" 
+  content="default-src *"
+  > -->
+  <!-- <meta http-equiv="Content-Security-Policy" 
+  content="default-src *; 
+          frame-src 'self' https://*.stripe.com https://checkout.stripe.com; 
+          font-src 'self' https://use.fontawesome.com https://maxcdn.bootstrapcdn.com https://fonts.googleapis.com https://fonts.gstatic.com data: blob: filesystem:;
+          script-src  'self' 'unsafe-eval' http://localhost:* https://*.stripe.com https://checkout.stripe.com https://www.gstatic.com https://code.jquery.com https://maxcdn.bootstrapcdn.com https://cdnjs.cloudflare.com https://cdnjs.cloudflare.com data: filesystem: blob:; 
+          object-src 'self' blob: ; 
+          connect-src https://api.stripe.com https://checkout.stripe.com http://localhost:*;
+          media-src 'self' blob: ; 
+          style-src * http://localhost:* https://*.stripe.com https://checkout.stripe.com ;
+          img-src * data: blob: https://*.stripe.com;"> -->
+  <meta name="keywords" content="miles college, miles, pmm, miles college pmm, purple marching machine, purple, marching, machine, pmm weekend, weekend, day, pmm day, ">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <!-- Css Files -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/index.css">
+  <base href="/" />
+  <title>PMM Weekend Official Website</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- landing page with countdown timer to the event -->
+    <div id="landing" class="landing">
+      <a name="landing"></a>
+      <!-- navbar -->
+      <nav class="nav navbar hero-nav">
+        <!-- need logo in nav -->
+        <a class="link-1" href="#landing">Home</a>
+        <a class="link-1" href="#about">About Us</a>
+        <a class="link-1" href="#schedule">Schedule</a>
+        <a class="link-1" href="#comittee">Committee</a>
+        <a class="link-1" href="#registration">Register</a>
+        <a class="link-1 photo-link" href="#photo-gallery">Gallery</a>
+        <a class="link-1 member-link" href="#member-sign-up">Sign-Up</a>
+        <a class="link-1" href="#contact">Contact</a>
+      </nav>
+      <div class="landing-front">
+        <div class="row">
+          <div class="col title-content">
+
+            <h2 class="top-title">April 12-14 2019, Birmingham, Al</h2>
+            <!-- <h1><span>P</span>MM Weekend</h1> -->
+            <h1 class="text-center">Countdown to 2019 PMM Weekend...</h1>
+          </div>
+          <div class="w-100"></div>
+          <div class="col">
+            <!-- countdown to event -->
+            <ul id="countdown">
+              <li id="days">
+                <div class="number">00</div>
+                <div class="label">Days</div>
+              </li>
+              <li id="hours">
+                <div class="number">00</div>
+                <div class="label">Hours</div>
+              </li>
+              <li id="minutes">
+                <div class="number">00</div>
+                <div class="label">Minutes</div>
+              </li>
+              <li id="seconds">
+                <div class="number">00</div>
+                <div class="label">Seconds</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- about the event and organization(why?) -->
+      <div class="container about-container" id="about">
+
+        <div class="about-text">
+          <h2>About PMM Day</h2>
+          <p>The PMM Weekend is a weekend of events showcasing the family portion of the long standing
+            Miles
+            College Purple Maching Machine. The main purpose of this event is build a funraising hub to donate back to our band and to create a
+            tradition
+            that bridges the gaps between old-school band members, those that marched under the direction of Mr. Arthur
+            Means
+            from 1996-2006, the more current band members that marched under the direction of Mr. Donald
+            Crawford
+            from 2007-2012, Mr.James Merriweather from 2012-2016, and the current members of the Purple Marching
+            Machine,
+            under the direction of Mr. Willie Snipes.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end of landing page -->
+
+    <!-- schedule of events page -->
+    <div class="schedule" id="schedule">
+      <a name="schedule"></a>
+      <div class="schedule-title text-center">
+        <h1>Schedule of Events</h1>
+      </div>
+      <div class="container">
+        <div class="schedule-row row align-items-center">
+          <!-- friday events -->
+          <div class="col-xl-3 col-lg col-md-12 col-sm-12 col-xs-12 schedule-box">
+            <div class="schedule-box-top">
+              <span>FRI</span>
+              <ul>
+                <li>4:12:19</li>
+                <li>06pm</li>
+              </ul>
+              <h3>Kick-Off Party</h3>
+            </div>
+            <div class="schedule-box-read-more" data-toggle="modal" data-target="#Friday">
+              <a href="#schedule">
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="Friday" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="schedule-modal-content">
+                  <div class="schedule-modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">PMM Weekend Kick-Off Party</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="schedule-modal-body">
+                    <div class="schedule-modal-location">
+                      <span>Friday, 4/12</span>
+                      <span>location: Sleek Sports Bar</span>
+                      <span>1005 20th St S, Birmingham, AL 35205</span>
+                    </div>
+                    <p>This is the first day of the PMM Weekend and it begins with a pre-party. This is an
+                      opportunity for
+                      new and old members to meet up, party, and see each other before the big saturday picnic. This event is
+                      ideal
+                      for those who are coming in from out of town and those that just want to hang with other band
+                      members
+                      and fellowship.</p>
+                    <p>This event is a adult event and will include alcohol & smoke.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- saturday events -->
+          <div class="col-xl-3 col-lg col-md-12 col-sm-12 col-xs-12 schedule-box">
+            <div class="schedule-box-top">
+              <span>SAT</span>
+              <ul>
+                <li>4:13:19</li>
+                <li>11am</li>
+              </ul>
+              <h3>PMM Picnic</h3>
+            </div>
+            <div class="schedule-box-read-more" data-toggle="modal" data-target="#Saturday">
+              <a href="#schedule">
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="Saturday" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="schedule-modal-content">
+                  <div class="schedule-modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">PMM Picnic</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="schedule-modal-body">
+                    <div class="schedule-modal-location">
+                      <span>Saturday, 4/13</span>
+                      <span>Location: Fairfield City Park</span>
+                    </div>
+                    <p>The first PMM Picnic will be held on a Saturday at <a href="https://www.google.com/maps/place/Fairfield+City+Park/@33.4907646,-86.9132613,15z/data=!4m5!3m4!1s0x0:0xe30d8d01415cb14a!8m2!3d33.4907646!4d-86.9132613">Fairfield City
+                        Park</a>. We
+                      will have an open booth when you get to the park to grab you wrist band for those that
+                      pre-ordered
+                      and a line for those who need a wristband. You must pay the entry fee in order to participate in
+                      the picnic. Food and drinks will only
+                      be given to those that possess a wristband.</p>
+                    <p>Please be mindful of those that have volunteered to make sure this event is a success and that we are here to also generate funds back to the band. Please be responsible and purchase a wristband for this event.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- saturday events -->
+          <div class="col-xl-3 col-lg col-md-12 col-sm-12 col-xs-12 schedule-box">
+            <div class="schedule-box-top">
+              <span>SAT</span>
+              <ul>
+                <li>4:13:19</li>
+                <li>8pm</li>
+              </ul>
+              <h3>After Party</h3>
+            </div>
+            <div class="schedule-box-read-more" data-toggle="modal" data-target="#Saturday">
+              <a href="#schedule">
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="Saturday" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="schedule-modal-content">
+                  <div class="schedule-modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">PMM Picnic After Party</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="schedule-modal-body">
+                    <div class="schedule-modal-location">
+                      <span>Saturday, 4/13</span>
+                      <span>Location: Blue Onyx</span>
+                    </div>
+                    <p>The first PMM Picnic will be held on a Saturday at <a href="https://www.google.com/maps/place/Fairfield+City+Park/@33.4907646,-86.9132613,15z/data=!4m5!3m4!1s0x0:0xe30d8d01415cb14a!8m2!3d33.4907646!4d-86.9132613">Fairfield City
+                        Park</a>. We
+                      will have an open booth when you get to the park to grab you wrist band for those that
+                      pre-ordered
+                      and a line for those who need a wristband. You must pay the entry fee in order to participate in
+                      the picnic. Food and drinks will only
+                      be given to those that possess a wristband.</p>
+                    <p>Please be mindful of those that have volunteered to make sure this event is a success and that we are here to also generate funds back to the band. Please be responsible and purchase a wristband for this event.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- sunday events -->
+          <div class="col-xl-3 col-lg col-md-12 col-sm-12 col-xs-12 schedule-box">
+            <div class="schedule-box-top">
+              <span>SUN</span>
+              <ul>
+                <li>4:14:19</li>
+                <li>11am</li>
+              </ul>
+              <h3>Farwell</h3>
+
+
+            </div>
+            <div class="schedule-box-read-more" data-toggle="modal" data-target="#Sunday">
+              <a href="#schedule">
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="Sunday" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="schedule-modal-content">
+                  <div class="schedule-modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Church & Farwell</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="schedule-modal-body">
+                    <div class="schedule-modal-location">
+                      <span>Sunday, 4/14</span>
+                      <span>Location: On own</span>
+                    </div>
+                    <p>PMM has also based itself on putting the lord first and formost and it is for this reason we
+                      have been
+                      able to continue to thrive in the manner we have been all these years.</p>
+                    <p>So, This is an opportunity for the PMM family to attend church as one collective or they can
+                      simply bid
+                      farwell to members that have to drive or fly back out of town but this is solely based on the
+                      memebers
+                      and not a official event for the weekend</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end events -->
+        </div>
+      </div>
+    </div>
+    <!-- test area for committee -->
+
+    <!-- comittee members and people that helped make it possible -->
+    <div class="container-fluid comittee-area" id="comittee">
+      <a name="commitee"></a>
+      <div class="container">
+        <h1>Comittee Members</h1>
+        <h2>A Thanks to the commitee and the Organizers of this event</h2>
+      </div>
+      <div class="container">
+        <div class="row comittee-wrapper">
+          <!-- person 1 -->
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="comittee-person">
+              <a href="#">
+                <img class="img-responsive" src="../images/micheal_burnett.jpg" alt="Card image cap">
+              </a>
+              <div class="comittee-content">
+                <h3>
+                  <a href="#">Michael Burnett</a>
+                </h3>
+                <p> Class of 2014</p>
+                <span>Occupation:</span>
+                <span>IT Consultant</span>
+              </div>
+            </div>
+          </div>
+          <!-- person 2 -->
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="comittee-person">
+              <a href="#">
+                <img class="img-responsive" src="../images/joseph_f_pic.jpg" alt="Card image cap">
+              </a>
+              <div class="comittee-content">
+                <h3>
+                  <a href="#">Joseph Fenderson</a>
+                </h3>
+                <p>Class of 2015</p>
+                <span>Occupation:</span>
+                <span>Software Developer</span>
+              </div>
+            </div>
+          </div>
+          <hr>
+<!-- include rest of committee in site -->
+        </div>
+      </div>
+    </div>
+    <!-- registration for the events currently 3 options payment may be set up through strip or find a way to send to cashapp account -->
+    <div class="price-area" id="registration">
+      <a name="registration"></a>
+      <div class="container">
+        <h1 class="title-default">Ticket Price & Plan</h1>
+        <p class="sub-title-default">Here you can purchase your ticket and tent spaces for the event and skip the lines</p>
+        <p class="sub-title-fine-print">*** There are limited tent spaces available. ***</p>
+      </div>
+      <div class="container">
+        <div class="row ticket-row">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 ticket-form">
+            <select id="numberOfTickets">
+              <option value="0">Quantity of Tickets</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 ticket-form">
+            <select id="purchase">
+              <option value="individual">Individual Tickets - $10</option>
+              <option value="space">Tent Space - $120</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="ticket-button-div">
+        <button id="ticketBtn" class="ticket-button">Submit</button>
+      </div>
+      <div>
+        <p class="ticket-sub-text">If you would like to donate to the PMM Weekend, Please send your payments to either
+          cashApp: $PMMWeekend or by clicking the link <a href="https://www.paypal.me/PMMPicnic" class="ticket-link">PayPal</a></p>
+      </div>
+    </div>
+    <div class="photo-gallery-area" id="photo-gallery">
+      <a name="photo-gallery"></a>
+      <div class="container photo-title">
+        <h1>Photo Gallery</h1>
+      </div>
+      <div class="photo-background">
+        <div class="photo-container">
+          <div id="slideshow" class="slideshow">
+            <div><img src="../images/homecoming.jpg" /></div>
+            <div><img src="../images/una2013.jpg" /></div>
+            <div><img src="../images/pmm_frontline.jpeg" /></div>
+            <div><img src="../images/lb_conduct.jpg" /></div>
+            <div><img src="../images/frontline_jared.jpg" /></div>
+            <div><img src="../images/blowdown2018.jpg" /></div>
+            <div><img src="../images/dancers.jpeg" /></div>
+            <div><img src="../images/una2013.jpg" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Band Member sign up start -->
+    <div class="band-member-area" id="member-sign-up">
+      <a name="member-sign-up"></a>
+      <div class="container">
+        <h3 class="title-member">Band Members Signup!</h3>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="member-left">
+              <p>Are you a current or previous member of the Purple Marching Machine? if so, please fill out our form
+                to be added to the PMM directory.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="member-form">
+              <input type="text" name="memberName" placeholder="Name" id="memberName" required>
+              <input type="text" name="memberEmail" placeholder="Email Address" id="memberEmail" required>
+              <input type="tel" name="memberNumber" placeholder="Phone Number" id="memberNumber" pattern="[1-9]{1}[0-9]{9}"
+                maxlength="10" required>
+              <input type="text" pattern="[0-9]*" name="memberLocation" placeholder="Location(Zip Code)" id="memberLocation"
+                required>
+              <input type="number" name="memberCrabYear" placeholder="What year did you start" id="memberCrabYear" min="1996"
+                max="2018" step="4" required>
+              <input id="memberSubmit" type="submit" value="Sign Up" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Band Member sign up end -->
+    <!-- Footer Area Starts -->
+    <footer class="footer-area-top" id="contact">
+      <a name="contact"></a>
+      <div class="container ">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 footer-box">
+            <div class="footer-links">
+              <h3>Useful Links</h3>
+              <ul class="featured-links">
+                <li>
+                  <a href="#about">About Us</a>
+                </li>
+                <li>
+                  <a href="#schedule">Schedule</a>
+                </li>
+                <li>
+                  <a href="#comittee">Comittee</a>
+                </li>
+                <li>
+                  <a href="#registration">Register</a>
+                </li>
+                <li>
+                  <a href="#photo-gallery">Photo Gallery</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 footer-box">
+            <div class="footer-contact">
+              <h3>Send us a Message</h3>
+              <input type="text" name="name" placeholder="Name" class="form" id="name" required>
+              <input type="text" name="email" placeholder="Email Address" class="form" id="email" required>
+              <textarea name="message" cols="30" rows="5" placeholder="Your Message Here..." class="form" type="text"
+                id="message" required></textarea>
+              <button id="contactSubmit" class="btn-form" onClick="window.location.reload();">Send Message</button>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 footer-box">
+            <div class="footer-social">
+              <h3>Connect with PMM</h3>
+              <ul>
+                <li>
+                  <a target="_blank" href="https://www.facebook.com/PMM-Miles-College-Band-224083991060901/">
+                    <i class="fab fa-facebook-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.youtube.com/results?search_query=Miles+College+Purple+marching+machine+marching+band+PMM+2019">
+                    <i class="fab fa-youtube-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.instagram.com/milescollegebands/?hl=en">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+              <div class="footer-social">
+                <h3>Apply for Miles!</h3>
+                <ul>
+                  <li>
+                    <a target="_blank" href="https://www.miles.edu">
+                      <i class="fas fa-graduation-cap"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <span style="color: #CEBD39">Developed by Joseph Fenderson</span>
+          <span>
+            <a target="_blank" href="mailto:fenderson.joseph@gmail.com">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </span>
+          <span><a target="_blank" href="https://www.github.com/JFenderson">
+              <i class="fab fa-github"></i>
+            </a></span>
+          <span><a target="_blank" href="https://www.miles.edu">
+              <i class="fas fa-graduation-cap"></i>
+            </a></span>
+        </div>
+      </div>
+    </footer>
+  </div>
+  </div>
+  <!-- Js Files -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <noscript>
+    For full functionality of this site it is necessary to enable JavaScript.
+    Here are the <a href="https://www.enable-javascript.com/" target="_blank">
+      instructions how to enable JavaScript in your web browser</a>.
+  </noscript>
+</body>
+
+</html>
