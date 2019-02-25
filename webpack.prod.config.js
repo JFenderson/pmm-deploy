@@ -110,9 +110,9 @@ module.exports = {
       excludeChunks: [ 'server' ],
       chunks: ['main'],
       minify: {
-        collapseWhitespace: true,
+        collapseWhitespace: false,
         removeComments: true,
-        removeAttributeQuotes: true
+        removeAttributeQuotes: false
       }
     }),
     new MiniCssExtractPlugin({
