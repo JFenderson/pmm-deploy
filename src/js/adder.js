@@ -1,2 +1,2 @@
-const adder = (x, y) => x + y
-export default adder
+const adder = (x, y) => x + y;
+export default adder;

@@ -29,7 +29,7 @@ html {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/middle_of_field_M.jpg');
     background-color: rgba(66, 14, 66, 0.699);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 100%;
     font-family: 'Quicksand', sans-serif;
     background-position: center center;
     -webkit-background-size: cover !important;

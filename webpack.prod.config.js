@@ -93,6 +93,28 @@ module.exports = {
         removeAttributeQuotes: true
       }
     }),
+    new HtmlWebPackPlugin({
+      template: "./src/html/404.html",
+      filename: "./404.html",
+      excludeChunks: [ 'server' ],
+      chunks: ['main'],
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeAttributeQuotes: true
+      }
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/html/500.html",
+      filename: "./500.html",
+      excludeChunks: [ 'server' ],
+      chunks: ['main'],
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeAttributeQuotes: true
+      }
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].[hash].css'

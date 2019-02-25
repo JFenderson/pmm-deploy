@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import stateRouting from '../middleware/routing.mw';
 import contactRouter from './gmail';
 import userRouter from './user';
 import stripeDonationsRouter from './stripePay';

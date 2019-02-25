@@ -1,0 +1,40 @@
+/* 
+purple - rgba(66, 14, 66, 0.699)
+gold - rgb(230, 191, 22)
+grey: #939093,
+white: #FFFFFF
+off-white: #F9F7F5
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.page {
+    color: #F9F7F5;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/middle_of_field_M.jpg');
+    background-color: rgba(66, 14, 66, 0.699);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Quicksand', sans-serif;
+    background-position: center center;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    image-rendering: optimizeQuality;
+    height: 100vh;
+    text-align: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.page h1{
+    margin: 3em;
+    font-size: 5em;
+}
