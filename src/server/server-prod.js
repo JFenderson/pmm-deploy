@@ -596,11 +596,5 @@ app.post('/contact', (req) => {
 		});
 });
 
-// //catch all endpoint will be Error Page
-// app.get('*', function (req, res) {
-// 	res.sendFile(errorPg);
-// });
-
-// debug('booting %o PMM Weekend server');
 
 http.createServer(app).listen(process.env.PORT || 5000);
