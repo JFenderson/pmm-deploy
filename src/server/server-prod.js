@@ -44,7 +44,7 @@ app.set('trust proxy', true);
 app.set('trust proxy', 'loopback');
 app.use(cors());
 app.use(express.static(path.join(__dirname + '../../src')));
-app.get('/', (_, res) => {
+app.get('*', (_, res) => {
 	res.sendFile(HTML_FILE);
 });
 
@@ -596,11 +596,11 @@ app.post('/contact', (req) => {
 		});
 });
 
-//catch all endpoint will be Error Page
-app.get('*', function (req, res) {
-	res.sendFile(errorPg);
-});
+// //catch all endpoint will be Error Page
+// app.get('*', function (req, res) {
+// 	res.sendFile(errorPg);
+// });
 
-debug('booting %o PMM Weekend server');
+// debug('booting %o PMM Weekend server');
 
 http.createServer(app).listen(process.env.PORT || 5000);
