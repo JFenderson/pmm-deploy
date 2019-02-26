@@ -600,11 +600,14 @@ app.post('/contact', (req) => {
 	const email = req.body.email;
 	const message = req.body.message;
 	const mailOption = {
-		from: `${name} <${email}>`,// who the email is coming from..in the contact form
-		to: 'purplemarchingmachinepicnic96@gmail.com',//who the email is going to
-		subject: `New Message from ${email} from the PMM Weekend Site`,//subject line
-		text: message,
-		html: `<div style="text-align: center; margin: auto; margin-right: auto 0; border: 1px solid; padding: 10px; width: 50%; height: auto;">
+		'sender': {
+			'name': `${name}` ,'email': `${email}`},// who the email is coming from..in the contact form
+		'to':[{
+			'email': 'purplemarchingmachinepicnic96@gmail.com'
+		}],//who the email is going to
+		'subject': `New Message from ${email} from the PMM Weekend Site`,//subject line
+		'textContent': message,
+		'htmlContent': `<div style="text-align: center; margin: auto; margin-right: auto 0; border: 1px solid; padding: 10px; width: 50%; height: auto;">
       <h1>Hey PMM Admin,</h1> 
       <h1>You have a new message from the PMM Weekend Site</h1>
       <h2>From: ${name}</h2>

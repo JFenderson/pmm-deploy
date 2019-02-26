@@ -89,7 +89,7 @@ $(document).ready(function () {
 		let email = $('#email').val();
 		let message = $('#message').val();
 
-		fetch('http://localhost:5000/contact', {
+		fetch('https://pmmweekend.com/contact', {
 			method: 'POST',
 			body: JSON.stringify({
 				name: name, email: email, message: message
@@ -120,7 +120,7 @@ $(document).ready(function () {
 		let location = $('#memberLocation').val();
 		let crabYear = $('#memberCrabYear').val();
 
-		fetch('http://localhost:5000/members/signup', {
+		fetch('https://pmmweekend.com/members/signup', {
 			method: 'POST', // or 'PUT'
 			body: JSON.stringify({
 				name: name, email: email, phoneNumber: number, location: location, crabYear: crabYear
@@ -221,7 +221,7 @@ $(document).ready(function () {
 
 		if (tixType == 'individual') {
 			if (tixQuanity == 1) {
-				return fetch('http://localhost:5000/charge/tickets/idv/1', {
+				return fetch('httsp:/pmmweekend.com0/charge/tickets/idv/1', {
 					method: 'POST',
 					headers: {
 						'Accept': 'application/json',
@@ -239,7 +239,7 @@ $(document).ready(function () {
 
 			} else if (tixQuanity == 2) {
 
-				return fetch('http://localhost:5000/charge/tickets/idv/2', {
+				return fetch('httsp:/pmmweekend.com0/charge/tickets/idv/2', {
 					method: 'POST',
 					headers: {
 						'Accept': 'application/json',
@@ -256,7 +256,7 @@ $(document).ready(function () {
 				// return data;
 
 			} else if (tixQuanity == 3) {
-				return fetch('http://localhost:5000/charge/tickets/idv/3', {
+				return fetch('httsp:/pmmweekend.com0/charge/tickets/idv/3', {
 					method: 'POST',
 					headers: {
 						'Accept': 'application/json',
@@ -273,7 +273,7 @@ $(document).ready(function () {
 				// return data;
 
 			} else if (tixQuanity == 4) {
-				return fetch('http://localhost:5000/charge/tickets/idv/4', {
+				return fetch('httsp:/pmmweekend.com0/charge/tickets/idv/4', {
 					method: 'POST',
 					headers: {
 						'Accept': 'application/json',
@@ -290,7 +290,7 @@ $(document).ready(function () {
 				// return data;
 
 			} else if (tixQuanity == 5) {
-				return fetch('http://localhost:5000/charge/tickets/idv/5', {
+				return fetch('httsp:/pmmweekend.com0/charge/tickets/idv/5', {
 					method: 'POST',
 					headers: {
 						'Accept': 'application/json',
@@ -309,7 +309,7 @@ $(document).ready(function () {
 			}
 		} else {
 			if (tixQuanity == 1) {
-				return fetch('http://localhost:5000/charge/tickets/tntsp/1', {
+				return fetch('httsp:/pmmweekend.com0/charge/tickets/tntsp/1', {
 					method: 'POST',
 					headers: {
 						'Accept': 'application/json',
@@ -326,7 +326,7 @@ $(document).ready(function () {
 				// return data;
 
 			} else if (tixQuanity == 2) {
-				return fetch('http://localhost:5000/charge/tickets/tntsp/2', {
+				return fetch('httsp:/pmmweekend.com0/charge/tickets/tntsp/2', {
 					method: 'POST',
 					headers: {
 						'Accept': 'application/json',
@@ -343,7 +343,7 @@ $(document).ready(function () {
 				// return data;
 
 			} else if (tixQuanity == 3) {
-				return fetch('http://localhost:5000/charge/tickets/tntsp/3', {
+				return fetch('httsp:/pmmweekend.com0/charge/tickets/tntsp/3', {
 					method: 'POST',
 					headers: {
 						'Accept': 'application/json',
