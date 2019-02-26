@@ -2,29 +2,30 @@ import $ from 'jquery';
 
 $(document).ready(function () {
 	// START NAVBAR
-	$(function () {
-		let currentHash = '#';
-		let blocksArr = $('.block');
+	// $(function () {
+	// 	let currentHash = '#';
+	// 	let blocksArr = $('.block');
 
-		$(document).scroll(function () {
-			let currentTop = window.pageYOffset / 1;
-			for (let i = 0; blocksArr.length; i++) {
-				let currentElementTop = $(blocksArr[i]).offset().top;
-				let hash = $(blocksArr[i]).attr('id');
-				if (currentElementTop < currentTop && currentTop < currentElementTop + $(blocksArr[i]).height() && currentHash != hash) {
-					if (history.pushState) {
-						history.pushState(null, null, hash);
-					}
-					else {
-						location.hash = hash;
-					}
-					currentHash = hash;
-				}
+	// 	$(window).scroll(function () {
+	// 		let currentTop = window.pageYOffset / 1;
+	// 		for (let i = 0; blocksArr.length; i++) {
+	// 			let currentElementTop = $(blocksArr[i]).offset().top-10;
+	// 			let hash = $(blocksArr[i]).attr('id');
+	// 			if (currentElementTop < currentTop && currentTop < currentElementTop + $(blocksArr[i]).height() && currentHash != hash) {
+	// 				if (history.pushState) {
+	// 					history.pushState(null, null, hash);
+	// 				}
+	// 				else {
+	// 					location.hash = hash;
+	// 				}
+	// 				currentHash = hash;
+	// 			}
 
-			}
+	// 		}
 
-		});
-	});
+	// 	});
+	// });
+
 
 	let stickyNav = function () {
 		let scrollTop = $(window).scrollTop();
@@ -34,8 +35,6 @@ $(document).ready(function () {
 			$('.hero-nav').removeClass('sticky');
 		}
 	};
-
-
 
 
 	$('.hero-nav .link-1').click(function (e) {

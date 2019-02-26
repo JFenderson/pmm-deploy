@@ -31,8 +31,18 @@ const app = express(),
 	DIST_DIR = __dirname,
 	HTML_FILE = path.join(DIST_DIR, '../dist/index.html'),
 	compiler = webpack(config),
-	errorPg = path.join(DIST_DIR, '../dist/404.html'); //this is your error page
+  errorPg = path.join(DIST_DIR, '../dist/404.html'), //this is your error page
+  legal = path.join(DIST_DIR, '../dist/legal/legal.html'),
+  privatePolicy = path.join(DIST_DIR, '../dist/legal/privatePolicy.html'),
+  cookiesPolicy = path.join(DIST_DIR, '../dist/legal/cookiesPolicy.html'),
+  term = path.join(DIST_DIR, '../dist/legal/term.html'),
+  returnPolicy = path.join(DIST_DIR, '../dist/legal/return.html')
 
+
+	if (process.env.NODE_ENV !== 'production') {
+		console.log('Looks like we are in development mode!');
+	}
+ 
 
 app.use(webpackDevMiddleware(compiler, {
 	publicPath: config.output.publicPath
@@ -44,14 +54,32 @@ app.set('trust proxy', true);
 app.set('trust proxy', 'loopback');
 app.use(cors());
 app.use(express.static(path.join(__dirname + '../../src')));
-app.get('*', (_, res) => {
+app.get('/', (_, res) => {
 	res.sendFile(HTML_FILE);
 });
-
 app.use(function (req, res, next) {
-	console.log(chalk.blue('/' + req.method + '-' + req.url)); //eslint-disable-line no-console
-	next();
+  console.log(chalk.blue('/' + req.method + '-' + req.url)); //eslint-disable-line no-console
+  next();
 });
+
+// getting legal html files
+app.get('/legal/legal', (_,res) => {
+  res.sendFile(legal)
+})
+app.get('/legal/term', (_,res) => {
+  res.sendFile(term)
+})
+app.get('/legal/privatePolicy', (_,res) => {
+  res.sendFile(privatePolicy)
+})
+app.get('/legal/cookiesPolicy', (_,res) => {
+  res.sendFile(cookiesPolicy)
+})
+app.get('/legal/return', (_,res) => {
+  res.sendFile(returnPolicy)
+})
+
+
 
 //-----USER ROUTES-----
 app.get('/members', (req, res) => {
@@ -421,7 +449,7 @@ app.post('/charge/tickets/tntsp/1', (req, res) => {
 		email: email,
 	}).then((customer) => {
 		stripe.charges.create({
-			amount: 12000,
+			amount: 10000,
 			currency: 'usd',
 			description: 'For PMM Weekend - 1 tent space',
 			customer: customer.id,
@@ -471,7 +499,7 @@ app.post('/charge/tickets/tntsp/2', (req, res) => {
 		email: email,
 	}).then((customer) => {
 		stripe.charges.create({
-			amount: 24000,
+			amount: 20000,
 			currency: 'usd',
 			description: 'For PMM Weekend - 2 tent spaces',
 			customer: customer.id,
@@ -523,7 +551,7 @@ app.post('/charge/tickets/tntsp/3', (req, res) => {
 		email: email,
 	}).then((customer) => {
 		stripe.charges.create({
-			amount: 36000,
+			amount: 30000,
 			currency: 'usd',
 			description: 'For PMM Weekend - 3 tent spaces',
 			customer: customer.id,
@@ -596,5 +624,11 @@ app.post('/contact', (req) => {
 		});
 });
 
+//catch all endpoint will be Error Page
+app.use('*', function (req, res) {
+	res.sendStatus(404).sendFile(errorPg);
+});
+
+debug('booting %o PMM Weekend server');
 
 http.createServer(app).listen(process.env.PORT || 5000);

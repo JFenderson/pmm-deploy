@@ -13,10 +13,10 @@ const app = express(),
 	HTML_FILE = path.join(DIST_DIR, '../dist/index.html'),
 	compiler = webpack(config);
 
-app.use(webpackDevMiddleware(compiler, {
-	publicPath: config.output.publicPath
-}));
-app.use(webpackHotMiddleware(compiler));
+// app.use(webpackDevMiddleware(compiler, {
+// 	publicPath: config.output.publicPath
+// }));
+// app.use(webpackHotMiddleware(compiler));
 app.get('/', (_ ,res) => {
 	res.sendFile(HTML_FILE);
 });

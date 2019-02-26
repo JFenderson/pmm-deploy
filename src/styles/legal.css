@@ -1,0 +1,41 @@
+.wrapper{
+}
+
+.wrapper h1{
+    text-align: center;
+}
+
+.legal-wrap{
+    padding: 6em;
+}
+
+.list-group{
+    margin-top: 7em;
+}
+
+.list-group a{
+    font-size: 1.5em;
+}
+
+.hero-nav {
+    position: relative;
+    height: 3em;
+    transition: 0.5s ease;
+    background-color: lightgray;
+
+}
+
+.hero-nav a {
+    color: rgba(66, 14, 66, 0.699);
+    width: 7em;
+    /* height: 3em; */
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.hero-nav a:hover {
+    background-color: rgba(66, 14, 66, 0.699);
+    color: rgb(230, 191, 22);
+    border-radius: 10px;
+    /* padding: 10px 0px; */
+}

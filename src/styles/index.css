@@ -254,10 +254,25 @@ li {
 
 .schedule-box .schedule-box-top {
     margin-bottom: 10px;
-    display: flex;
+    /* display: flex; */
     font-family: 'Quicksand', sans-serif;
 }
 
+.schedule-line{
+    color: rgb(230, 191, 22);
+    margin-bottom: 0;
+}
+.schedule-date{
+    color: white;
+    font-size: 30px;
+    border-bottom: 1px solid rgb(230, 191, 22);
+    padding-bottom: 15px;
+}
+.schedule-time{
+    color: white;
+    padding-left: 8px;
+    font-size: 1.4em;
+}
 .schedule-box .schedule-box-top span {
     line-height: 0.8;
     margin: 0 15px 0 -5px;
@@ -419,6 +434,10 @@ li {
     padding: 2em 0;
 }
 
+.top-comittee{
+    justify-content: center;
+}
+
 .comittee-area h1 {
     font-size: 2.2em;
 }
@@ -436,6 +455,14 @@ li {
     overflow: hidden;
     position: relative;
     margin-bottom: 10px;
+}
+.comittee-line-gold{
+    border-bottom:1px solid rgb(230, 191, 22);
+    padding: 10px;
+}
+.comittee-line-purple{
+    border-bottom:1px solid rgb(66, 14, 66);
+    padding: 10px;
 }
 
 .img-responsive {
@@ -1552,7 +1579,7 @@ li {
     /* landing end */
     /* schedule start */
     .schedule{
-        height: 50vh;
+        height: auto;
     }
     .schedule .container{
         margin-top: 4em;

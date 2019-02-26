@@ -115,6 +115,61 @@ module.exports = {
         removeAttributeQuotes: false
       }
     }),
+    new HtmlWebPackPlugin({
+      template: "./src/html/legal/legal.html",
+      filename: "./legal/legal.html",
+      excludeChunks: [ 'server' ],
+      chunks: ['main'],
+      minify: {
+        collapseWhitespace: false,
+        removeComments: true,
+        removeAttributeQuotes: false
+      }
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/html/legal/term.html",
+      filename: "./legal/term.html",
+      excludeChunks: [ 'server' ],
+      chunks: ['main'],
+      minify: {
+        collapseWhitespace: false,
+        removeComments: true,
+        removeAttributeQuotes: false
+      }
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/html/legal/return.html",
+      filename: "./legal/return.html",
+      excludeChunks: [ 'server' ],
+      chunks: ['main'],
+      minify: {
+        collapseWhitespace: false,
+        removeComments: true,
+        removeAttributeQuotes: false
+      }
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/html/legal/privatePolicy.html",
+      filename: "./legal/privatePolicy.html",
+      excludeChunks: [ 'server' ],
+      chunks: ['main'],
+      minify: {
+        collapseWhitespace: false,
+        removeComments: true,
+        removeAttributeQuotes: false
+      }
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/html/legal/cookiesPolicy.html",
+      filename: "./legal/cookiesPolicy.html",
+      excludeChunks: [ 'server' ],
+      chunks: ['main'],
+      minify: {
+        collapseWhitespace: false,
+        removeComments: true,
+        removeAttributeQuotes: false
+      }
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].[hash].css'
