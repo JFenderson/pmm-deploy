@@ -196,7 +196,7 @@ $(document).ready(function () {
 					amount: 1000 * tixQuanity
 				});
 			}
-			else if (tixType == 'space') {
+			if (tixType == 'space') {
 				if (tixQuanity == '1' || tixQuanity == '2' || tixQuanity == '3') {
 					// Open Checkout with further options:
 					handler.open({
@@ -206,6 +206,30 @@ $(document).ready(function () {
 					});
 				} else {
 					alert('You can only purchase 3 tent spaces per transaction, please contact the committee if more is needed.');
+				}
+			}
+			if (tixType == "chld") {
+				if (tixQuanity == "1" || tixQuanity == "2" || tixQuanity == "3") {
+				// Open Checkout with further options:
+					handler.open({
+					name: 'PMM Picnic',
+					description: 'Children Tickets',
+					amount: 500 * tixQuanity,
+				});
+				} else {
+					alert('You can only purchase 3 children tickets per transaction, please contact the committee if more is needed.');
+				}
+			}
+			  if(tixType == "bundle"){
+				if (tixQuanity == "1" || tixQuanity == "2") {
+				// Open Checkout with further options:
+				handler.open({
+				  name: 'PMM Picnic',
+				  description: 'Weekend Bundle',
+				  amount: 3000 * tixQuanity
+				  });
+				}else{
+				  alert('You can only purchase 2 weekend bundles per transaction, please contact the committee if more is needed.');
 				}
 			}
 		});
@@ -307,58 +331,123 @@ $(document).ready(function () {
 				// return data;
 
 			}
-		} else {
+		} else if(tixType == "space"){
 			if (tixQuanity == 1) {
-				return fetch('https://pmmweekend.com/charge/tickets/tntsp/1', {
-					method: 'POST',
-					headers: {
-						'Accept': 'application/json',
-						'Content-Type': 'application/json',
-						'Authorization': 'Bearer' + stripe
-					},
-					body: JSON.stringify(token, args)
-				});
-				// .then((res) => {
-				//   res.json()
-				// })
-				// .then((data) => {})
-				// data.body = JSON.parse(data.body);
-				// return data;
-
+			return fetch(`https://pmmweekend.com/api/charge/tickets/tntsp/1`, {
+				method: "POST",
+				headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				'Authorization': 'Bearer' + stripe
+				},
+				body: JSON.stringify(token, args)
+			})
+			// const data = await res.json();
+			// data.body = JSON.parse(data.body);
+			// return data;
+	
 			} else if (tixQuanity == 2) {
-				return fetch('https://pmmweekend.com/charge/tickets/tntsp/2', {
-					method: 'POST',
-					headers: {
-						'Accept': 'application/json',
-						'Content-Type': 'application/json',
-						'Authorization': 'Bearer' + stripe
-					},
-					body: JSON.stringify(token, args)
-				});
-				// .then((res) => {
-				//   res.json()
-				// })
-				// .then((data) => {})
-				// data.body = JSON.parse(data.body);
-				// return data;
-
+			return fetch(`https://pmmweekend.com/api/charge/tickets/tntsp/2`, {
+				method: "POST",
+				headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				'Authorization': 'Bearer' + stripe
+				},
+				body: JSON.stringify(token, args)
+			})
+			// const data = await res.json();
+			// data.body = JSON.parse(data.body);
+			// return data;
+	
 			} else if (tixQuanity == 3) {
-				return fetch('https://pmmweekend.com/charge/tickets/tntsp/3', {
-					method: 'POST',
-					headers: {
-						'Accept': 'application/json',
-						'Content-Type': 'application/json',
-						'Authorization': 'Bearer' + stripe
-					},
-					body: JSON.stringify(token, args)
-				});
-				// .then((res) => {
-				//   res.json()
-				// })
-				// .then((data) => {})
-				// data.body = JSON.parse(data.body);
-				// return data;
-
+			return fetch(`https://pmmweekend.com/api/charge/tickets/tntsp/3`, {
+				method: "POST",
+				headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				'Authorization': 'Bearer' + stripe
+				},
+				body: JSON.stringify(token, args)
+			})
+			// const data = await res.json();
+			// data.body = JSON.parse(data.body);
+			// return data;
+	
+			}
+		}else if(tixType == "chld"){
+		  if (tixQuanity == 1) {
+			return fetch(`https://pmmweekend.com/api/charge/tickets/chld/1`, {
+				method: "POST",
+				headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				'Authorization': 'Bearer' + stripe
+				},
+				body: JSON.stringify(token, args)
+			})
+			// const data = await res.json();
+			// data.body = JSON.parse(data.body);
+			// return data;
+	
+			} else if (tixQuanity == 2) {
+			return fetch(`https://pmmweekend.com/api/charge/tickets/chld/2`, {
+				method: "POST",
+				headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				'Authorization': 'Bearer' + stripe
+				},
+				body: JSON.stringify(token, args)
+			})
+			// const data = await res.json();
+			// data.body = JSON.parse(data.body);
+			// return data;
+	
+			} else if (tixQuanity == 3) {
+			return fetch(`https://pmmweekend.com/api/charge/tickets/chld/3`, {
+				method: "POST",
+				headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				'Authorization': 'Bearer' + stripe
+				},
+				body: JSON.stringify(token, args)
+			})
+			// const data = await res.json();
+			// data.body = JSON.parse(data.body);
+			// return data;
+	
+			}
+		}else{
+		  if (tixQuanity == 1) {
+			return fetch(`https://pmmweekend.com/api/charge/tickets/bundle/1`, {
+				method: "POST",
+				headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				'Authorization': 'Bearer' + stripe
+				},
+				body: JSON.stringify(token, args)
+			})
+			// const data = await res.json();
+			// data.body = JSON.parse(data.body);
+			// return data;
+	
+			} else if (tixQuanity == 2) {
+			return fetch(`https://pmmweekend.com/api/charge/tickets/bundle/2`, {
+				method: "POST",
+				headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				'Authorization': 'Bearer' + stripe
+				},
+				body: JSON.stringify(token, args)
+			})
+			// const data = await res.json();
+			// data.body = JSON.parse(data.body);
+			// return data;
+	
 			}
 		}
 	};
