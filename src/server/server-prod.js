@@ -189,7 +189,7 @@ app.post('/members/signup', (req, res) => {
 });
 //----STRIPE ROUTES-----
 //1 CHILD TICKET
-router.post('/tickets/chld/1', (req, res) => {
+app.post('/tickets/chld/1', (req, res) => {
 	let token = req.body.id;
 	let email = req.body.email;
 	let name = req.body.card.name;
@@ -238,7 +238,7 @@ router.post('/tickets/chld/1', (req, res) => {
 		});
 	});
 //2 CHILDREN TICKETS
-router.post('/tickets/chld/2', (req, res) => {
+app.post('/tickets/chld/2', (req, res) => {
 	let token = req.body.id;
 	let email = req.body.email;
 	let name = req.body.card.name;
@@ -287,7 +287,7 @@ router.post('/tickets/chld/2', (req, res) => {
 		});
 	})
 //3 CHILDREN TICKETS
-router.post('/tickets/chld/3', (req, res) => {
+app.post('/tickets/chld/3', (req, res) => {
 	let token = req.body.id;
 	let email = req.body.email;
 	let name = req.body.card.name;
@@ -336,7 +336,7 @@ router.post('/tickets/chld/3', (req, res) => {
 		});
 	})
 //1 WEEKEND BUNDLE $30.00
-router.post('/tickets/bundle/1', (req, res) => {
+app.post('/tickets/bundle/1', (req, res) => {
 	let token = req.body.id;
 	let email = req.body.email;
 	let name = req.body.card.name;
@@ -385,7 +385,7 @@ router.post('/tickets/bundle/1', (req, res) => {
 		});
 })
 //2 WEEKEND BUNDLE $60.00
-router.post('/tickets/bundle/2', (req, res) => {
+app.post('/tickets/bundle/2', (req, res) => {
 	let token = req.body.id;
 	let email = req.body.email;
 	let name = req.body.card.name;
