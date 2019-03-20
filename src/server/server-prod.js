@@ -17,6 +17,7 @@ import human from 'humanparser';
 import SibApiV3Sdk from 'sib-api-v3-sdk';
 import debug from 'debug';
 import chalk from 'chalk';
+import request from 'request';
 
 let members = new Table('members');
 let defaultClient = SibApiV3Sdk.ApiClient.instance;
@@ -93,6 +94,17 @@ app.get('/members', (req, res) => {
 			return res.sendStatus(400).json(err);
 
 		});
+
+		var opts = { 
+			'limit': 50, // Number | Number of documents per page
+			'offset': 0, // Number | Index of the first document of the page
+			'modifiedSince': new Date("2013-10-20T19:20:30+01:00") // Date | Filter (urlencoded) the contacts modified after a given UTC date-time (YYYY-MM-DDTHH:mm:ss.SSSZ). Prefer to pass your timezone in date-time format for accurate result.
+		};
+		contactApiInstance.getContacts(opts).then(function(data) {
+			console.log('API called successfully. Returned data: ' + data);
+		}, function(error) {
+			console.error(error);
+		});
 });
 
 app.get('/members/:id', (req, res) => {
@@ -139,6 +151,7 @@ app.post('/members/signup', (req, res) => {
 			return res.status(400).send(err);
 		});
 
+
 	//creates the contact
 	let createContact = new SibApiV3Sdk.CreateContact();
 	createContact = {
@@ -157,6 +170,14 @@ app.post('/members/signup', (req, res) => {
 			new Error(err);
 		});
 
+		var contactEmails = new SibApiV3Sdk.AddContactToList([data.email]); // AddContactToList | Emails addresses of the contacts
+
+		contactApiInstance.addContactToList(5, contactEmails).then(function(data) {
+			console.log('API called successfully. Returned data: ' + data);
+		}, function(error) {
+			console.error(error);
+		});
+
 	const mailOption = {
 		'sender': { 'name': 'PMM Admin', 'email': 'purplemarchingmachinepicnic96@gmail.com' },// who the email is coming from..in the contact form
 		'to': [{
@@ -165,19 +186,12 @@ app.post('/members/signup', (req, res) => {
 			'email': `${email}`
 		}],
 		'subject': 'Thank you for Signing Up to the PMM Database',//subject line
-		'htmlContent': `
-    <div style="text-align: center;">
-      <h1>Hello <span style="color: purple;">${name.firstName} ${name.lastName}</span>,</h1> 
-      <h2>Thank you signing up. You have been added to the PMM Database which will be used to contact you for future events such as road trips to support the band, band schedules and more currently in the works.</h2>
-      <h3>Our goal is to build and get every person that marched as PMM in our database so that we can have a directory. With your help we can get there so spread the word to sign up from the website.</h3>
-      <h1 style="color: purple"><span style="color: gold;">P</span>MM 1X!!!</h1>
-      <p>If you do not wish to be contacted please repond to this email saying <strong>"PLEASE REMOVE"</strong> and you will be removed from the listing.</p>
-    </div>`,
-		'textContent': 'Thank you signing up. You have been added to the PMM Database which will be used to contact you for future events such as road trips to support the band, band schedules and more currently in the works.Our goal is to build and get every person that marched as PMM in our database so that we can have a directory. With your help we can get there so spread the word to sign up from the website. PMM 1X!!!. If you do not wish to be contacted please repond to this email saying PLEASE REMOVE and you will be removed from the listing'
+		'templateId': 3
 	};
 
 	let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
 	sendSmtpEmail = mailOption;
+	
 	smtpApiInstance.sendTransacEmail(sendSmtpEmail)
 		.then(function (data) {
 			return data;
