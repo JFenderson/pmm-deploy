@@ -1,0 +1,85 @@
+digraph G {
+  graph [ rankdir = LR, splines = "ortho", fontsize = 12, label = "6011ef511522c95d7d7a", labelloc = "t", fontname = "gotham-book,sans-serif", compound = true ];
+  node [ fontsize = 12, width = 0, height = 0, margin = "0.2,0.1", fontname = "gotham-book,sans-serif" ];
+  edge [ fontsize = 10, fontname = "gotham-book,sans-serif" ];
+subgraph "cluster_0" {
+  graph [ label = "main [entry] [initial]", fontcolor = "0,0,0.28", bgcolor = "0,0,0.95", color = "0,0,0.55" ];
+subgraph "cluster_jquery" {
+  graph [ label = "jquery", fillcolor = "0.2916666666666667,0,0.85", color = "0.2916666666666667,0,0.45", style = "filled", URL = "https://www.npmjs.com/package/jquery", target = "npm" ];
+  "0" [ fillcolor = "0.2916666666666667,0.19,0.94", color = "0.2916666666666667,0.73,0.71", fontcolor = "0.2916666666666667,0.97,0.35", style = "filled", labelloc = "c", label = "jquery.js", shape = rect, URL = "https://unpkg.com/jquery/dist/jquery.js", target = "_blank" ];
+}
+
+  "1" [ fillcolor = "0.2916666666666667,0.19,0.94", color = "0.2916666666666667,0.73,0.71", fontcolor = "0.2916666666666667,0.97,0.35", style = "filled", labelloc = "c", label = "main.js", shape = rarrow, margin = "0.15" ];
+  "2" [ fillcolor = "0.2916666666666667,0.19,0.94", color = "0.2916666666666667,0.73,0.71", fontcolor = "0.2916666666666667,0.97,0.35", style = "filled", labelloc = "c", label = "index.js", shape = rect ];
+  "3" [ fillcolor = "0.2916666666666667,0.19,0.94", color = "0.2916666666666667,0.73,0.71", fontcolor = "0.2916666666666667,0.97,0.35", style = "filled", labelloc = "c", label = "main.js", shape = rect ];
+  "cluster_0hidden" [ style = "invis", label = "", fixedsize = true, margin = "0", width = 0, height = 0 ];
+}
+
+  "0";
+  "1";
+  "2";
+  "3";
+  "file_./index.html" [ labelloc = "c", label = "index.html", shape = rect, fillcolor = "0.625,0.19,0.94", color = "0.625,0.73,0.71", fontcolor = "0.625,0.97,0.35", style = "filled" ];
+  "file_2a0f3c039a9a4b3060d43ee565c8b211.jpg" [ labelloc = "c", label = "2a0f3c039a9a4b3060d43ee565c8b211.jpg", shape = rect, fillcolor = "0.625,0.19,0.94", color = "0.625,0.73,0.71", fontcolor = "0.625,0.97,0.35", style = "filled" ];
+  "file_95e3a217614115d30e3991275b5cf5fa.jpg" [ labelloc = "c", label = "95e3a217614115d30e3991275b5cf5fa.jpg", shape = rect, fillcolor = "0.625,0.19,0.94", color = "0.625,0.73,0.71", fontcolor = "0.625,0.97,0.35", style = "filled" ];
+  "file_9ce7a4b799d231e27b766759ecb9307c.jpg" [ labelloc = "c", label = "9ce7a4b799d231e27b766759ecb9307c.jpg", shape = rect, fillcolor = "0.625,0.19,0.94", color = "0.625,0.73,0.71", fontcolor = "0.625,0.97,0.35", style = "filled" ];
+  "file_a9de46da33eb4c3e89716f873a72ada4.jpg" [ labelloc = "c", label = "a9de46da33eb4c3e89716f873a72ada4.jpg", shape = rect, fillcolor = "0.625,0.19,0.94", color = "0.625,0.73,0.71", fontcolor = "0.625,0.97,0.35", style = "filled" ];
+  "file_c7591241faf3c4e80dafd7becaa146fe.jpg" [ labelloc = "c", label = "c7591241faf3c4e80dafd7becaa146fe.jpg", shape = rect, fillcolor = "0.625,0.19,0.94", color = "0.625,0.73,0.71", fontcolor = "0.625,0.97,0.35", style = "filled" ];
+  "file_main.js" [ labelloc = "c", label = "main.js", shape = rect, fillcolor = "0.625,0.19,0.94", color = "0.625,0.73,0.71", fontcolor = "0.625,0.97,0.35", style = "filled" ];
+  "file_main.js.map" [ labelloc = "c", label = "main.js.map", shape = rect, fillcolor = "0.625,0.19,0.94", color = "0.625,0.73,0.71", fontcolor = "0.625,0.97,0.35", style = "filled" ];
+  "cluster_0hidden";
+  "1" -> "2" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "1" -> "3" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "2" -> "0" [ arrowsize = .75, color = "0,0.73,0.71" ];
+  "cluster_0hidden" -> "file_main.js" [ arrowsize = .75, color = "0.625,0.73,0.71", ltail = "cluster_0" ];
+  "cluster_0hidden" -> "file_main.js.map" [ arrowsize = .75, color = "0.625,0.73,0.71", ltail = "cluster_0" ];
+}

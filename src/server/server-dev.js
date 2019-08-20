@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname + '../../src')));
 app.use(express.static(path.join(__dirname + '../vendors')));
 app.use('/api', routes);
 app.set('port', process.env.PORT || 3000);
-app.listen(app.get('port'), (err) => {
+app.listen(app.get('port'), (err) => {r
 	if(err){
 		return new Error(err);
 	}else{

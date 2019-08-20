@@ -9,7 +9,7 @@
     "buildDev": "rimraf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
     "buildProd": "rimraf dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
     "heroku-prebuild": "npm install --dev",
-    "prestart": "npm run buildProd",
+    "prestart": "npm run buildDev",
     "start": "node ./dist/server.js"
   },
   "jest": {
