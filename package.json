@@ -47,7 +47,7 @@
     "morgan": "^1.9.1",
     "mysql": "^2.16.0",
     "node-google-calendar": "^1.1.1",
-    "node-sass": "^4.10.0",
+    "node-sass": "^7.0.0",
     "nodemailer": "^4.7.0",
     "nodemailer-mailgun-transport": "^1.4.0",
     "nodemailer-sendinblue-transport": "^1.2.3",
